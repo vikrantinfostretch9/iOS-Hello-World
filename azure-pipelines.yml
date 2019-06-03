@@ -9,10 +9,14 @@ trigger:
 pool:
   vmImage: 'macos-latest'
 
-steps:
-- task: CocoaPods@0
+- task: InstallAppleCertificate@2
   inputs:
-    forceRepoUpdate: false
+    certSecureFile: '.p12'
+    certPwd: 'icpl123#'
+    keychain: 'temp'
+- task: InstallAppleProvisioningProfile@1
+  inputs:
+    provisioningProfileLocation: 'secureFiles'
 - task: Xcode@5
   inputs:
     actions: 'build'
