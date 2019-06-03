@@ -8,15 +8,6 @@ trigger:
 
 pool:
   vmImage: 'macos-latest'
-
-- task: InstallAppleCertificate@2
-  inputs:
-    certSecureFile: '.p12'
-    certPwd: 'icpl123#'
-    keychain: 'temp'
-- task: InstallAppleProvisioningProfile@1
-  inputs:
-    provisioningProfileLocation: 'secureFiles'
 - task: Xcode@5
   inputs:
     actions: 'build'
