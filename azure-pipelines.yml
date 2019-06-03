@@ -12,7 +12,7 @@ pool:
 steps:
 - task: CocoaPods@0
   inputs:
-    forceRepoUpdate: true
+    forceRepoUpdate: false
 - task: Xcode@5
   inputs:
     actions: 'build'
