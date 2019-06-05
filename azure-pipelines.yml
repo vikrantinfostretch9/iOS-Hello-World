@@ -14,7 +14,7 @@ steps:
   inputs:
     actions: 'build'
     scheme: ''
-    sdk: 'iphoneos'
+    sdk: 'iphonesimulator8.2'
     configuration: 'Release'
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
